@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package example;
+
+// 計算機
+service Calc {
+  rpc Solve (Input) returns (Output) {}
+}
+
+// 問題を定義
+message Input {
+  string question = 1;
+}
+
+// 答えを定義
+message Output {
+  int32 answer = 1;
+}
